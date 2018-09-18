@@ -1,4 +1,4 @@
-FROM goposky/jenkins-ssh-slave:alpine
+FROM jenkinsci/slave:alpine
 LABEL maintainer="mail@goposky.com"
 
 # setup SSH server
