@@ -19,8 +19,8 @@ RUN apk --update add --no-cache openssh openssh-client python2 python2-dev py2-p
   && sed -ir '/jenkins/ s/\/sbin\/halt/\/bin\/sh/' /etc/passwd \
   && chown -R jenkins:jenkins /etc/ssh \
   && env | grep _ >> /etc/environment \
-  && pip install botocore boto3 \
-  && pip3 install botocore boto3 \
+  && pip install botocore boto3 hvac \
+  && pip3 install botocore boto3 hvac \
   && wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip \
   && unzip terraform_0.11.14_linux_amd64.zip \
   && mv terraform /usr/local/bin/terraform
